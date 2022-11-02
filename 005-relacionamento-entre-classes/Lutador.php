@@ -9,7 +9,7 @@
         //Métodos
         public function apresentar()
         {
-            echo "<hr> SENHORAS E SENHORAS, COM VOCÊS O LUTADOR " . $this->getNome() . ", do(a) " . $this->getNacionalidade() . " ele tem " . $this->getIdade() . " anos de idade, tem " . $this->getAltura() . " de altura e pesa " . $this->getPeso() . "Kg. Ele também tem " . $this->getVitorias() . " vitórias, " . $this->getDerrotas() . " derrotas e " . $this->getEmpates() . " empates. <hr>";
+            echo "<hr> SENHORAS E SENHORES, COM VOCÊS O LUTADOR " . $this->getNome() . ", do(a) " . $this->getNacionalidade() . " ele tem " . $this->getIdade() . " anos de idade, tem " . $this->getAltura() . " de altura e pesa " . $this->getPeso() . "Kg. Ele também tem " . $this->getVitorias() . " vitórias, " . $this->getDerrotas() . " derrotas e " . $this->getEmpates() . " empates. <hr>";
         }
 
         public function status()
