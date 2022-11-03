@@ -8,15 +8,16 @@
 
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.5em;
         }
 
     </style>
 </head>
 
 <body>
-    <?php
-        require 'Lutador.php';
+    <pre><?php
+        require_once 'Lutador.php';
+        require_once 'Lutar.php';
 
         $lutador = [];
 
@@ -27,7 +28,15 @@
         $lutador[4] = new Lutador("UFOCobol \u{1F47D}", "Brasil \u{1F1E7}\u{1F1F7}", 37, 1.70, 119.3, 5, 4, 3);
         $lutador[5] = new Lutador("Nerdart \u{1F913}", "EUA \u{1F1FA}\u{1F1F8}", 30, 1.81, 105.7, 12, 2, 4);
 
-    ?>
+        $ufe_01 = new Lutar();
+        $ufe_01->marcarLuta($lutador[2], $lutador[3]);
+        $ufe_01->lutar();
+
+        //$lutador[0]->status();
+        //$lutador[1]->status();
+
+    ?></pre>
+    
 </body>
 
 </html>

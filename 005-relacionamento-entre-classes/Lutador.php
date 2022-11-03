@@ -9,12 +9,12 @@
         //Métodos
         public function apresentar()
         {
-            echo "<hr> SENHORAS E SENHORES, COM VOCÊS O LUTADOR " . $this->getNome() . ", do(a) " . $this->getNacionalidade() . " ele tem " . $this->getIdade() . " anos de idade, tem " . $this->getAltura() . " de altura e pesa " . $this->getPeso() . "Kg. Ele também tem " . $this->getVitorias() . " vitórias, " . $this->getDerrotas() . " derrotas e " . $this->getEmpates() . " empates. <hr>";
+            echo "<hr> SENHORAS E SENHORES, COM VOCÊS O LUTADOR " . $this->getNome() . ", do(a) " . $this->getNacionalidade() . "." . " <br> Ele tem " . $this->getIdade() . " anos de idade, tem " . $this->getAltura() . " de altura e pesa " . $this->getPeso() . "Kg. <br> Ele também tem " . $this->getVitorias() . " vitórias, " . $this->getDerrotas() . " derrotas e " . $this->getEmpates() . " empates. <hr>";
         }
 
         public function status()
         {
-            echo $this->getNome() . " tem " . $this->getPeso() . "Kg, " . $this->getCategoria() . ", tem " . $this->getVitorias() . " vitórias, " . $this->getDerrotas() . " derrotas e " . $this->getEmpates() . " empates.";
+            echo $this->getNome() . " tem " . $this->getPeso() . "Kg, " . $this->getCategoria() . ", tem " . $this->getVitorias() . " vitórias, " . $this->getDerrotas() . " derrotas e " . $this->getEmpates() . " empates. <br>";
         }
 
         public function ganharLuta()
