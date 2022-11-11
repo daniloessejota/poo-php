@@ -14,7 +14,7 @@
         }
 
         //Métodos Especiais
-        public function __constructor($n, $i, $s)
+        public function __construct($n, $i, $s)
         {
             $this->setNome($n);
             $this->setIdade($i);

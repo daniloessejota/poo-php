@@ -1,5 +1,6 @@
 <?php
-    require 'LeitorInterface.php';
+    require_once 'PessoaClass.php';
+    require_once 'LeitorInterface.php';
 
     class Livro implements Leitor 
     {
@@ -9,6 +10,16 @@
         //Métodos:
 
         //Métodos Especiais:
+        public function __construct($t, $a, $totalPag, $pagAtual)
+        {
+                $this->setTitulo($t);
+                $this->setAutor($a);
+                $this->setTotalDePaginas($totalPag);
+                $this->setPaginaAtual($pagAtual);
+                $this->setAberto(false);
+                $this->leitor->getNome();
+        }
+        
         public function getTitulo()
         {
                 return $this->titulo;
@@ -90,16 +101,20 @@
         public function abrir()
         {
             $this->setAberto(true);
+            echo "O livro está aberto.";
         }
 
         public function fechar()
         {
             $this->setAberto(false);
+            echo "O livro foi fechado.";
         }
 
         public function folhear()
         {
-            # code...
+            for ($i=0; $i <= $this->getTotalDePaginas(); $i+5) { 
+                echo "Folheando o livro, página" . $i . "...<br>";
+            }
         }
 
         public function avancarPagina()
