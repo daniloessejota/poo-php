@@ -2,7 +2,7 @@
     <?php
         require 'Caneta.php';
     
-        $caneta_1 = new Caneta;
+        $caneta_1 = new Caneta('Compactor', 'Azul', '0.7');
     
         $caneta_1->modelo = "Compactor";
         $caneta_1->cor  = "AZUL";

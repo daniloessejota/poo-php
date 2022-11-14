@@ -8,6 +8,15 @@
         private $titulo, $autor, $totalDePaginas, $paginaAtual, $aberto, $leitor;
 
         //Métodos:
+        public function detalhes($pessoaLeitora, $livro)
+        {
+                echo "Leitor: " . $pessoaLeitora->getNome() . ", do sexo " . $pessoaLeitora->getSexo() . " e tem " . $pessoaLeitora->getIdade() .  " anos de idade.</br>";
+                echo "Título do Livro: " . $livro->getTitulo() . "</br>";
+                echo "Autor: " . $livro->getAutor().  "</br>";
+                echo "Quantidade de Páginas: " . $livro->getTotalDePaginas() .  "</br>";
+                echo "O livro está aberto? " . $livro->getAberto() . "</br>";
+                echo "Página Atual: " . $livro->getPaginaAtual() . "</br>";
+        }
 
         //Métodos Especiais:
         public function __construct($t, $a, $totalPag, $pagAtual)
@@ -17,7 +26,6 @@
                 $this->setTotalDePaginas($totalPag);
                 $this->setPaginaAtual($pagAtual);
                 $this->setAberto(false);
-                $this->leitor->getNome();
         }
         
         public function getTitulo()
@@ -61,6 +69,11 @@
         
         public function getPaginaAtual()
         {
+                if (!$this->aberto) {
+                        echo "O livro está fechado.";
+                        return;
+                }
+
                 return $this->paginaAtual;
         }
  
@@ -74,7 +87,15 @@
 
         public function getAberto()
         {
-                return $this->aberto;
+                switch ($this->aberto) {
+                        case 'true':
+                                echo "sim";
+                                break;
+                        
+                        default:
+                                echo "não";
+                                break;
+                }
         }
 
         public function setAberto($aberto)
@@ -101,19 +122,19 @@
         public function abrir()
         {
             $this->setAberto(true);
-            echo "O livro está aberto.";
+            
         }
 
         public function fechar()
         {
             $this->setAberto(false);
-            echo "O livro foi fechado.";
+            
         }
 
         public function folhear()
         {
-            for ($i=0; $i <= $this->getTotalDePaginas(); $i+5) { 
-                echo "Folheando o livro, página" . $i . "...<br>";
+            for ($i=0; $i <= $this->getTotalDePaginas(); $i = $i + 10) { 
+                echo "Folheando o livro, página " . $i . "...<br>";
             }
         }
 
