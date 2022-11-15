@@ -24,6 +24,8 @@
      
      $livros[0]->abrir();
 
+     //$leitores[0]->fazerAniversario();
+
      //$livros[0]->fechar();
      //$livros[0]->folhear();
      //$livros[0]->avancarPagina();

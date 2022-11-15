@@ -10,8 +10,7 @@
 
         public function fazerAniversario()
         {
-            $this->getIdade() + 1;
-            // $this->idade ++; - outra maneira de representar esse código.
+            $this->idade ++; 
         }
 
         //Métodos Especiais
