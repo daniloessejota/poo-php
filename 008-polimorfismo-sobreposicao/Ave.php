@@ -15,7 +15,7 @@ class Ave extends Animal
 
     public function alimentar()
     {
-        echo "comendo carne, insetos ou frutas";
+        return "comendo carne, insetos ou frutas";
     }
 
     public function emitirSom()

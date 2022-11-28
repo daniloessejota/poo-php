@@ -11,17 +11,17 @@ class Mamifero extends Animal
    //MÉTODOS
    public function locomover()
    {
-        echo "correndo";
+        echo 'correndo';
    }
 
    public function alimentar()
    {
-        echo "mamando";
+        echo 'mamando';
    }
 
    public function emitirSom() 
    {
-        echo "o mamífero está emitindo um som";
+        echo 'o mamífero está emitindo um som';
    }
    
 

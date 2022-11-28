@@ -5,7 +5,7 @@ require_once 'Animal.php';
 class Peixe extends Animal 
 {
     //ATRIBUTOS
-    private $corDasEscama;
+    private $corDasEscamas;
     
 
     //MÉTODOS 
@@ -30,13 +30,13 @@ class Peixe extends Animal
 
 
     //MÉTODOS ESPECIAIS
-    public function getCorDasEscama()
+    public function getCorDasEscamas()
     {
         return $this->corDasEscama;
     }
 
 
-    public function setCorDasEscama($corDasEscama)
+    public function setCorDasEscamas($corDasEscama)
     {
         $this->corDasEscama = $corDasEscama;
 
