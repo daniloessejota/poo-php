@@ -40,7 +40,7 @@
 
         public function setTotalAssistido($totalAssistido)
         {
-                $this->totalAssistido = $totalAssistido . ' vídeos';
+                $this->totalAssistido = $totalAssistido;
 
                 return $this;
         }

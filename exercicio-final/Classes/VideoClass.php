@@ -7,7 +7,7 @@
         //ATRIBUTOS
         private $título;
         private $avaliação;
-        private $views;
+        private $views, $total;
         private $curtidas;
         private $reproduzindo;
 
@@ -16,8 +16,9 @@
         {
             $this->setTítulo($t);
             $this->setCurtidas(0);
-            $this->setViews(0);
-            $this->setAvaliação('-----');
+            $this->views = 0;
+            $this->total = 0;
+            $this->avaliação = 0;
             $this->setReproduzindo(false);
         }
 
@@ -33,21 +34,7 @@
 
                 return $this;
         }
-
         
-        public function getAvaliação()
-        {
-                return $this->avaliação;
-        }
-
-        public function setAvaliação($avaliação)
-        {
-                $this->avaliação = $avaliação;
-
-                return $this;
-        }
-
-
         public function getViews()
         {
                 return $this->views;
@@ -61,6 +48,31 @@
         }
 
         
+        public function getTotal()
+        {
+                return $this->total;
+        }
+
+        public function setTotal($total)
+        {
+                $this->total = $total;
+
+                return $this;
+        }
+        
+        public function getAvaliação()
+        {
+                return $this->avaliação;
+        }
+
+        public function setAvaliação($avaliação)
+        {
+                $this->setTotal($this->getTotal() + $avaliação);
+                $media = $this->getTotal()/$this->getViews();
+
+                $this->avaliação = $media;
+        }
+ 
         public function getCurtidas()
         {
                 return $this->curtidas;
@@ -105,5 +117,6 @@
         {
             $this->setCurtidas($this->getCurtidas() + 1);
         }
+
     }
     
