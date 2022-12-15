@@ -18,7 +18,14 @@
 <body>
     <?php
 
-        //Classes
+        //recurso para evitar a escrita de muitos requires:
+        spl_autoload_register(function($class)
+        {
+            require $class . '.php';
+        }
+        );
+
+        /* //Classes
         require_once 'Mamifero.php'; 'Reptil.php'; 'Peixe.php'; 'Ave.php'; 
         //Subclasses
         require_once 'SubCanguru.php'; 
@@ -26,7 +33,7 @@
         require_once 'SubCobra.php';
         require_once 'SubTartaruga.php';
         require_once 'SubArara.php';
-        require_once 'SubGoldenFish.php';
+        require_once 'SubGoldenFish.php'; */
 
         $mamiferos = [];
         $mamiferos[] = new Mamifero();
