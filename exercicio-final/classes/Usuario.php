@@ -1,5 +1,6 @@
 <?php
-    require_once 'PessoaClass.php';
+    
+    require_once 'Pessoa.php';
 
     class Usuario extends PessoaClass 
     {

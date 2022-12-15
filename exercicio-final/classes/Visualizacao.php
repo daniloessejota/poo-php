@@ -1,7 +1,13 @@
 <?php
 
-    require_once 'VideoClass.php';
-    require_once 'UsuarioClass.php';
+    spl_autoload_register(function($class)
+            {
+                require $class . '.php';
+            }
+        );
+        
+    //require_once 'VideoClass.php';
+    //require_once 'UsuarioClass.php';
 
     class Visualizacao
     {

@@ -1,6 +1,11 @@
 <?php
 
-    require_once 'Acoes.php';
+    //require_once 'Acoes.php';
+    spl_autoload_register(function($interface)
+            {
+                require $interface . '.php';
+            }
+        );
 
     class Video implements Acoes
     {

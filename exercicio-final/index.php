@@ -16,9 +16,15 @@
 <body>
     <pre>
         <?php
-            require_once 'Classes/VideoClass.php';
+            spl_autoload_register(function($class)
+            {
+                require 'classes/' . $class . '.php';
+            }
+            );
+
+            /* require_once 'Classes/VideoClass.php';
             require_once 'Classes/UsuarioClass.php';
-            require_once 'Classes/VisualizacaoClass.php';
+            require_once 'Classes/VisualizacaoClass.php'; */
             
             $videos[0] = new Video('POO com PHP - Polimorfismo');
             $videos[1] = new Video('HTML e CSS - Formulários');
@@ -30,12 +36,20 @@
             $visualizacao [0] = new Visualizacao($usuario[0], $videos[2]);
             $visualizacao [1] = new Visualizacao($usuario[0], $videos[0]);
             $visualizacao [2] = new Visualizacao($usuario[1], $videos[0]);
+            $visualizacao [3] = new Visualizacao($usuario[1], $videos[2]);
+            $visualizacao [4] = new Visualizacao($usuario[0], $videos[2]);
 
+            $visualizacao[0]->avaliacaoPorcentagem(90);
             $visualizacao[1]->avaliacaoPorcentagem(80);
             $visualizacao[2]->avaliacaoPorcentagem(40);
+            $visualizacao[3]->avaliacaoPorcentagem(100);
+            $visualizacao[4]->avaliacaoPorcentagem(70);
 
-            print_r($visualizacao[1]);
-            print_r($visualizacao[2]);
+            print_r($visualizacao[0]);
+            //print_r($visualizacao[1]);
+            //print_r($visualizacao[2]);
+            print_r($visualizacao[3]);
+            print_r($visualizacao[4]);
 
             //print_r($videos);
             //print_r($usuario);
